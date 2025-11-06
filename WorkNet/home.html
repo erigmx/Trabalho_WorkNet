@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início - WorkNet</title>
+  <link rel="stylesheet" href="/WorkNet/style/home.css">
+</head>
+
+<body>
+  <!-- ===== Cabeçalho Principal ===== -->
+  <header class="cabecalho-principal">
+    <nav class="barra-navegacao">
+
+      <section class="marca-navegacao">
+        <img src="/WorkNet/img/imagem_2025-10-29_203356460-removebg-preview.png" alt="Logotipo WorkNet">
+      </section>
+
+      <form class="formulario-pesquisa" id="formulario-pesquisa">
+        <input 
+          type="search" 
+          id="campo-pesquisa" 
+          placeholder="Busque por serviços ou categorias..."
+          autocomplete="off"
+        >
+        <button type="submit" aria-label="Buscar">🔍</button>
+      </form>
+
+      <section class="usuario-navegacao">
+        <a href="#">Início</a>
+        <a href="#">Serviços</a>
+        <a href="#">Sobre</a>
+        <button id="botao-sair" class="botao-sair" onclick="window.location.href='index.html'">Sair</button>
+      </section>
+    </nav>
+  </header>
+
+  <!-- ===== Conteúdo Principal ===== -->
+  <main class="conteudo-principal">
+
+    <!-- ===== Serviços em Destaque ===== -->
+    <section class="secao-servicos-destaque">
+      <header class="cabecalho-secao">
+        <h2>Serviços mais contratados</h2>
+      </header>
+
+      <article class="grade-servicos">
+        <figure class="item-servico">
+          <img src="/WorkNet/img/carreto.jpeg" alt="Serviço de Fretagem">
+          <figcaption>
+            <h3>Serviço de Fretagem</h3>
+            <p>Transporte rápido, seguro e confiável.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="item-servico">
+          <img src="/WorkNet/img/download.jpeg" alt="Serviço de Doméstica">
+          <figcaption>
+            <h3>Serviço Doméstico</h3>
+            <p>Deixe sua casa sempre limpa e organizada.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="item-servico">
+          <img src="/WorkNet/img/download.jpeg" alt="Diarista">
+          <figcaption>
+            <h3>Encanador</h3>
+            <p>Resolva problemas envolvendo encanção de maneira rápida.</p>
+            
+          </figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <!-- ===== Categorias ===== -->
+    <section class="secao-categorias">
+      <header class="cabecalho-secao">
+        <h2>Categorias</h2>
+      </header>
+
+      <article class="grade-categorias">
+        <figure class="cartao-categoria" data-categoria="babysitter">
+          <img src="" alt="Babá">
+          <figcaption><h3>Babá</h3></figcaption>
+        </figure>
+
+        <figure class="cartao-categoria" data-categoria="jardinagem">
+          <img src="" alt="Jardinagem">
+          <figcaption><h3>Jardinagem</h3></figcaption>
+        </figure>
+
+        <figure class="cartao-categoria" data-categoria="pintura">
+          <img src="" alt="Pintura">
+          <figcaption><h3>Pintura</h3></figcaption>
+        </figure>
+
+        <figure class="cartao-categoria" data-categoria="eletricista">
+          <img src"" alt="Eletricista">
+          <figcaption><h3>Eletricista</h3></figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <!-- ===== Divulgação de Serviços ===== -->
+    <section class="secao-divulgacao-servicos">
+      <header class="cabecalho-secao">
+        <h2>Divulgação de Serviços</h2>
+        <button class="botao-adicionar-servico" id="botao-adicionar-servico">+ Divulgar Serviço</button>
+      </header>
+
+      <section id="sem-resultados" class="sem-resultados" style="display: none;">
+        <p>😕 Nenhum resultado encontrado</p>
+        <span>Tente pesquisar outro termo ou categoria</span>
+      </section>
+
+      <article class="grade-divulgacoes" id="grade-servicos">
+        <!-- Cards de serviços gerados via JavaScript -->
+      </article>
+    </section>
+  </main>
+
+  <!-- ===== Rodapé ===== -->
+  <footer>
+    <section class="container-rodape">
+
+      <section class="rodape-esquerda">
+        <h2 class="logo">WorkNet</h2>
+
+        <nav aria-label="Redes sociais" class="icones-sociais">
+          <ul>
+            <li><a href="#"><img src="/WorkNet/img/icons/facebook.png" alt="Facebook"></a></li>
+            <li><a href="#"><img src="/WorkNet/img/icons/linkedin.png" alt="LinkedIn"></a></li>
+            <li><a href="#"><img src="/WorkNet/img/icons/instagram.png" alt="Instagram"></a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <nav aria-label="Links institucionais" class="rodape-direita">
+        <ul>
+          <li><a href="#">Serviços Populares</a></li>
+          <li><a href="#">Categorias</a></li>
+          <li><a href="#">Avaliações</a></li>
+          <li><a href="#">Sobre Nós</a></li>
+        </ul>
+      </nav>
+    </section>
+  </footer>
+
+  <!-- ===== Modal de Novo Serviço ===== -->
+  <section id="modal-servico" class="modal" style="display: none;">
+    <article class="conteudo-modal">
+      <header class="cabecalho-modal">
+        <h2>Divulgar Novo Serviço</h2>
+        <button class="botao-fechar-modal" id="fechar-modal">&times;</button>
+      </header>
+
+      <form id="formulario-servico">
+        <fieldset>
+          <legend class="sr-only">Informações do Serviço</legend>
+
+          <label for="titulo-servico">
+            <span>Título do Serviço</span>
+            <input type="text" id="titulo-servico" required>
+          </label>
+
+          <label for="categoria-servico">
+            <span>Categoria</span>
+            <select id="categoria-servico" required>
+              <option value="">Selecione uma categoria</option>
+              <option value="tecnologia">💻 Tecnologia</option>
+              <option value="design">🎨 Design</option>
+              <option value="educacao">📚 Educação</option>
+              <option value="saude">🏥 Saúde</option>
+              <option value="construcao">🔨 Construção</option>
+              <option value="beleza">💄 Beleza</option>
+              <option value="alimentacao">🍔 Alimentação</option>
+            </select>
+          </label>
+
+          <label for="descricao-servico">
+            <span>Descrição</span>
+            <textarea id="descricao-servico" rows="4" required></textarea>
+          </label>
+
+          <label for="preco-servico">
+            <span>Preço (R$)</span>
+            <input type="number" id="preco-servico" min="0" step="0.01" required>
+          </label>
+        </fieldset>
+
+        <footer class="rodape-modal">
+          <button type="submit" class="botao-enviar">Publicar Serviço</button>
+          <button type="button" class="botao-cancelar" id="cancelar-modal">Cancelar</button>
+        </footer>
+      </form>
+    </article>
+  </section>
+
+  <script src="/WorkNet/JS/home.js"></script>
+</body>
+</html>
