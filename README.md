@@ -2,17 +2,6 @@
 
 Worknet - Plataforma de Conexão de Serviços de Pronta Entrega Worknet é um projeto acadêmico desenvolvido para a disciplina de Processo de Software do curso de ESW da Universidade Católica do Salvador. O objetivo é criar uma plataforma web funcional para a empresa fictícia "Worknet", que visa conectar prestadores de serviços de pronta entrega a clientes que necessitam de soluções rápidas e eficientes.
 
-📝 Sumário Sobre o Projeto
-
-Funcionalidades
-
-Tecnologias Utilizadas
-
-Como Executar o Projeto
-
-Equipe
-
-Licença
 
 🎯 Sobre o Projeto A Worknet nasceu da necessidade de simplificar a contratação de serviços de pronta entrega, como motoboys, pequenos fretes e entregas locais. A plataforma permite que usuários encontrem e contratem prestadores de serviço de forma rápida e segura, enquanto oferece aos profissionais uma nova ferramenta para divulgar seu trabalho e encontrar clientes.
 
@@ -42,9 +31,9 @@ Front-End:
 
 HTML5
 
-CSS3 (ou algum framework como Bootstrap, Tailwind CSS)
+CSS3 
 
-JavaScript (ou algum framework como React, Vue.js, Angular)
+JavaScript 
 
 Back-End:
 
@@ -53,3 +42,5 @@ Javascript
 Outras Ferramentas:
 
 Git e GitHub para versionamento de código.
+
+Trello para o controle de tarefas.
