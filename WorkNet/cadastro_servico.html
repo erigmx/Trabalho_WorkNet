@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkNet</title>
+    <link rel="stylesheet" href="style/cadastro_servico.css">
+</head>
+<body>
+    <header class="cabecalho-principal">
+    <nav class="barra-navegacao">
+
+      <section class="marca-navegacao">
+        <img src="/WorkNet/img/imagem_2025-10-29_203356460-removebg-preview.png" alt="Logotipo WorkNet">
+      </section>
+
+      <form class="formulario-pesquisa" id="formulario-pesquisa">
+        <input 
+          type="search" 
+          id="campo-pesquisa" 
+          placeholder="Busque por serviços ou categorias..."
+          autocomplete="off"
+        >
+        <button type="submit" aria-label="Buscar">🔍</button>
+      </form>
+
+      <section class="usuario-navegacao">
+        <a href="#">Início</a>
+        <a href="#">Serviços</a>
+        <a href="#">Sobre</a>
+        <button id="botao-conta" class="botao-conta" onclick="window.location.href='perfil.html'">Conta</button>
+        <button id="botao-sair" class="botao-sair" onclick="window.location.href='index.html'">Sair</button>
+      </section>
+    </nav>
+  </header> 
+
+
+  <main>
+
+    <section class="container-formulario">
+        <header class="cabecalho-formulario">
+            <h1>Cadastro de Serviço</h1>
+        </header>
+
+        <article class="secao-formulario">
+            
+            <label for="nome-servico">
+                <span>Nome do serviço</span>
+                <input type="text" 
+                       name="nome"
+                       id="nome-servico" 
+                       placeholder="Ex: Doméstica" required>
+            </label>
+
+        <label for="categoria-servico">Categoria </label>
+            <select id="categoria-servico" name="categoria" required>
+                <option value="">Selecione uma categoria</option>
+                <option value="limpeza">Limpeza e Conservação</option>
+                <option value="construcao">Construção e Reformas</option>
+                <option value="eletrica">Elétrica</option>
+                <option value="hidraulica">Hidráulica e Encanamento</option>
+                <option value="jardinagem">Jardinagem e Paisagismo</option>
+                <option value="pintura">Pintura</option>
+                <option value="marcenaria">Marcenaria</option>
+                <option value="tecnologia">Tecnologia e Informática</option>
+                <option value="beleza">Beleza e Estética</option>
+                <option value="transporte">Transporte e Mudanças</option>
+                <option value="outros">Outros</option>
+            </select>
+
+
+            <label for="imagem-servico">Imagem do Serviço</label>
+                <input type="file" 
+                       name="imagem-servico"
+                       id="imagem-servico">
+
+                <figure id="image-preview" class="image-preview hidden">
+                    <img id="preview-img" src="" alt="Preview">
+                    <button type="button" class="btn-remove-image" onclick="removeImage()">×</button>
+                </figure>
+
+            <label for="descricao-servico">Descrição</label>
+                <textarea 
+                    id="descricao-servico" 
+                    name= "descricao" 
+                    rows="5"
+                    required
+                    placeholder="Descreva detalhadamente o serviço oferecido, experiência e diferenciais..."
+                ></textarea>
+
+            <label for="valor-servico">Valor (R$)</label>
+                <input 
+                    type="text" 
+                    id="valor-servico" 
+                    name="valor" 
+                    required
+                    placeholder="0,00"
+                >
+
+            <figure class="acoes-formulario">
+                <button type="button" class="btn btn-outline" onclick="resetForm()">Limpar</button>
+                <button type="submit" class="btn btn-primary">Cadastrar Serviço</button>
+            </figure>
+
+        </article>
+    </section>
+
+  </main>
+
+  <footer>
+    <section class="container-rodape">
+
+      <section class="rodape-esquerda">
+        <h2 class="logo">WorkNet</h2>
+
+        <nav aria-label="Redes sociais" class="icones-sociais">
+          <ul>
+            <li><a href="#"><img src="/WorkNet/img/icons/facebook.png" alt="Facebook"></a></li>
+            <li><a href="#"><img src="/WorkNet/img/icons/linkedin.png" alt="LinkedIn"></a></li>
+            <li><a href="#"><img src="/WorkNet/img/icons/instagram.png" alt="Instagram"></a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <nav aria-label="Links institucionais" class="rodape-direita">
+        <ul>
+          <li><a href="#">Serviços Populares</a></li>
+          <li><a href="#">Categorias</a></li>
+          <li><a href="#">Avaliações</a></li>
+          <li><a href="#">Sobre Nós</a></li>
+        </ul>
+      </nav>
+    </section>
+  </footer>
+</body>
+</html>
